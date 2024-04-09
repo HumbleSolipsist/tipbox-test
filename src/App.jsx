@@ -25,7 +25,7 @@ function App() {
   // Gets the json from jsonplaceholder
   useEffect(() => {
     const waitForJson = async () => {
-      fetch('http://jsonplaceholder.typicode.com/photos')
+      fetch('https://jsonplaceholder.typicode.com/photos')
       .then((response) => response.json())
       .then((json) => {
           setPhotosJson(json)
