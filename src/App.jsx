@@ -47,16 +47,20 @@ function App() {
       <Gallery json={photosJson.slice(curPageStart, curPageEnd)}/>
 
       {/* Pagination */}
-      <button onClick={() => setCurPage(curPage - 1)} disabled={curPage == 0}> Prev </button>
+      <button onClick={() => setCurPage(curPage - 1)} disabled={curPage == 0}>
+        Prev
+      </button>
       Page {curPage + 1}/{pageCount}
-      <button onClick={() => setCurPage(curPage + 1)} disabled={curPage == pageCount - 1}> Next </button>
+      <button onClick={() => setCurPage(curPage + 1)} disabled={curPage == pageCount - 1}>
+        Next
+      </button>
       <br/>
 
       {/* Shuffles the gallery */}
       <button onClick={() => {
-        setPhotosJson(shuffle(photosJson));
-        setCurPage(0);
-      }}>
+          setPhotosJson(shuffle(photosJson));
+          setCurPage(0);
+        }}>
         Shuffle
       </button>
     </div>
