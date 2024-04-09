@@ -4,6 +4,8 @@ import './App.css';
 
 import Gallery from './Gallery.jsx';
 
+// Returns a randomized ordering of the elements in the given array (arr)
+// Note: does *not* modify arr.
 function shuffle(arr) {
   // base-case - a list of length 1 cannot be shuffled.
   if (arr.length <= 1) {
@@ -20,6 +22,7 @@ function shuffle(arr) {
 function App() {
   const [photosJson, setPhotosJson] = useState([]);
 
+  // Gets the json from jsonplaceholder
   useEffect(() => {
     const waitForJson = async () => {
       fetch('http://jsonplaceholder.typicode.com/photos')
