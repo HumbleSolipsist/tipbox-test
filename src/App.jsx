@@ -35,12 +35,27 @@ function App() {
     waitForJson();
   }, []);
 
+  // Used for pagination
+  const [curPage, setCurPage] = useState(0);
+  const [picsPerPage, setPicsPerPage] = useState(20);
+  const curPageStart = curPage * picsPerPage;
+  const curPageEnd = curPageStart + picsPerPage;
+  const pageCount = Math.ceil(photosJson.length / picsPerPage);
+
   return (
     <div className="App">
-      <Gallery json={photosJson}/>
+      <Gallery json={photosJson.slice(curPageStart, curPageEnd)}/>
+
+      {/* Pagination */}
+      <button onClick={() => setCurPage(curPage - 1)} disabled={curPage == 0}> Prev </button>
+      Page {curPage + 1}/{pageCount}
+      <button onClick={() => setCurPage(curPage + 1)} disabled={curPage == pageCount - 1}> Next </button>
+      <br/>
+
+      {/* Shuffles the gallery */}
       <button onClick={() => {
-        let s = shuffle(photosJson);
-        setPhotosJson(s);
+        setPhotosJson(shuffle(photosJson));
+        setCurPage(0);
       }}>
         Shuffle
       </button>
