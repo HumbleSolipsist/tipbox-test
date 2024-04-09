@@ -6,7 +6,7 @@ function Gallery({json}) {
   return (
     <div className="Gallery">
       {json.map(({title, url, thumbnailUrl}, i) =>
-        <Frame key={i} title={title} url={url} thumbnailUrl = {thumbnailUrl}/>)}
+        <Frame key={i} title={title} url={url} thumbnailUrl={thumbnailUrl}/>)}
     </div>
   )
 }
