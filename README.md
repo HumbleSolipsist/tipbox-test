@@ -1,3 +1,21 @@
+# Sample App Made for Tipbox
+
+This is the simple sample app I (Andrew) made for my Tipbox application. You can
+run it locally simply with `npm start`, or `npm run start`. npm being installed is,
+of course, a prereq. That should automatically open the webpage in your browser, but,
+if it doesn't, there'll be a url printed to your terminal that you can use.
+
+Fyi, no special adjustments were made to the code to ensure thast caching occurred.
+In my research, it seemed that browsers will usually do the necessary caching automatically,
+and the techniques I found for forcing the desired behaviour seemed to be either
+depricated or needlessly circuitous for this use-case. I did test to make sure that
+caching was happening by checking the network tab in the inspect tool, and it seemed
+to be.
+
+The only extra feature implemented was very basic pagination.
+ 
+Below is all auto-generated, but I decided to leave it since it seems handy.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
