@@ -1,0 +1,5 @@
+.Gallery {
+  scroll-behavior: smooth;
+  overflow: auto;
+  white-space: nowrap;
+}
